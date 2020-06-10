@@ -46,3 +46,11 @@ body {
   font-weight: 300;
   line-height: 1.6;
   color: #6d5d4b; }
+
+.container {
+  display: grid;
+  grid-template-rows: 85vh auto 40vw repeat(3, auto);
+  grid-template-columns: repeat(8, minmax(min-content, 14rem));
+  gap: 1rem; }
+  .container > * {
+    background: orchid; }
