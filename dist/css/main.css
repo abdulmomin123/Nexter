@@ -50,7 +50,34 @@ body {
 .container {
   display: grid;
   grid-template-rows: 85vh auto 40vw repeat(3, auto);
-  grid-template-columns: repeat(8, minmax(min-content, 14rem));
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   gap: 1rem; }
   .container > * {
     background: orchid; }
+
+.features {
+  grid-column: center-start / center-end; }
+
+.footer {
+  grid-column: full-start / full-end; }
+
+.gallery {
+  grid-column: full-start / full-end; }
+
+.header {
+  grid-column: full-start / col-end 6; }
+
+.homes {
+  grid-column: center-start / center-end; }
+
+.realtors {
+  grid-column: col-start 7 / full-end; }
+
+.sidebar {
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1; }
+
+.story {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
