@@ -1,0 +1,21 @@
+.btn {
+  font-family: $font-display;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  background: none;
+  cursor: pointer;
+}
+
+.btn--story {
+  color: $color-white;
+  background: $color-primary;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background: $color-primary-dark;
+  }
+}
