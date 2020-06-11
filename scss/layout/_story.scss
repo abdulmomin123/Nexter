@@ -4,13 +4,39 @@
   grid-template-columns: repeat(2, 1fr);
 
   &__pictures {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    background: linear-gradient(
+        rgba($color-primary, 0.5),
+        rgba($color-primary, 0.5)
+      ),
+      url("/dist/img/back.jpg") no-repeat center center/cover;
+
+    &-img {
+      box-shadow: 0 2rem 5rem rgba($color-black, 0.2);
+      &--1 {
+        grid-row: 2 / 6;
+        grid-column: 2 / 6;
+      }
+
+      &--2 {
+        grid-row: 4 / 6;
+        grid-column: 4 / 7;
+        width: 115%;
+        z-index: 1;
+      }
+    }
   }
 
-  // Pic
-
   &__content {
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     padding: 6rem 6.5vw;
+    background: $color-grey-light-1;
 
     &-text {
       font-size: 1.5rem;
