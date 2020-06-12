@@ -41,6 +41,9 @@ img {
   display: block;
   width: 100%; }
 
+ul {
+  list-style: none; }
+
 body {
   font-family: "Nunito", sans-serif;
   font-weight: 300;
@@ -94,14 +97,16 @@ body {
   background: none;
   cursor: pointer; }
 
-.btn--story {
+.btn--story,
+.btn--cta {
   color: #fff;
   background: #c69963;
   font-size: 1.5rem;
   text-transform: uppercase;
   padding: 1.8rem 3rem;
   transition: all 0.2s; }
-  .btn--story:hover {
+  .btn--story:hover,
+  .btn--cta:hover {
     background: #b28451; }
 
 .container {
@@ -135,13 +140,69 @@ body {
   grid-column: full-start / full-end; }
 
 .gallery {
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 1fr); }
 
 .header {
   grid-column: full-start / col-end 6; }
 
 .homes {
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 7rem;
+  margin: 15rem 0; }
+  .homes__home {
+    background: #f9f7f6;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
+  .homes__img {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2; }
+  .homes__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: #c69963;
+    margin-right: 1.5rem; }
+  .homes__icon--heart {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    justify-self: end;
+    margin: 1rem;
+    width: 2.5rem;
+    height: 2.5rem; }
+  .homes__name {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    align-self: end;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 1.25rem;
+    width: 80%;
+    background: #101d2c;
+    color: #fff;
+    justify-self: center;
+    transform: translateY(50%); }
+  .homes__stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1 / -1;
+    margin-top: 2.5rem;
+    gap: 3.5rem;
+    column-gap: 5rem;
+    justify-self: center; }
+  .homes__stat {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center; }
+  .homes .btn--cta {
+    grid-column: 1 / -1; }
 
 .realtors {
   grid-column: col-start 7 / full-end; }
@@ -153,7 +214,8 @@ body {
 .story {
   grid-column: full-start / full-end;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden; }
   .story__pictures {
     display: grid;
     grid-template-columns: repeat(6, 1fr);

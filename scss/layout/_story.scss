@@ -2,6 +2,7 @@
   grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
 
   &__pictures {
     display: grid;
