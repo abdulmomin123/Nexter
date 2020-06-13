@@ -20,11 +20,54 @@
     <div class="container">
       <!-- Sidebar -->
       <aside class="sidebar">
-        sidebar
+        <input
+          type="checkbox"
+          name="checkbox"
+          id="checkbox"
+          class="sidebar__toggler"
+        />
+        <label for="checkbox" class="sidebar__btn">
+          <span class="sidebar__icon">
+            <!-- Icon here -->
+          </span>
+        </label>
       </aside>
 
       <header class="header">
-        header
+        <img src="/dist/img/logo.png" alt="Site logo" class="header__logo" />
+        <h3 class="heading--3">
+          Your Own Home
+        </h3>
+        <h1 class="heading--1">
+          The ultimate personal freedom
+        </h1>
+        <button class="btn btn--cta header__btn">
+          View Our Properties
+        </button>
+
+        <div class="header__companies">
+          <p class="header__companies-text">Seen On</p>
+          <img
+            src="/dist/img/logo-bbc.png"
+            alt="BBC logo"
+            class="header__companies-logo"
+          />
+          <img
+            src="/dist/img/logo-bi.png"
+            alt="BI logo"
+            class="header__companies-logo"
+          />
+          <img
+            src="/dist/img/logo-forbes.png"
+            alt="Forbes logo"
+            class="header__companies-logo"
+          />
+          <img
+            src="/dist/img/logo-techcrunch.png"
+            alt="Techcrunch logo"
+            class="header__companies-logo"
+          />
+        </div>
       </header>
 
       <!-- Realtors Section -->
@@ -487,7 +530,7 @@
 
       <!-- Footer -->
       <footer class="footer">
-        <nav class="footer__nav">
+        <ul class="footer__nav">
           <li class="footer__item">
             <a href="#" class="footer__link">
               Find your dream home
@@ -518,7 +561,11 @@
               Come work with us!
             </a>
           </li>
-        </nav>
+        </ul>
+
+        <p class="footer__text">
+          &copy; Copyright 2020 by Abdul Momin. All Rights Reserved.
+        </p>
       </footer>
     </div>
   </body>

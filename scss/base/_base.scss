@@ -11,7 +11,7 @@ html {
   box-sizing: border-box;
 
   @include respond(big-desk) {
-    font-size: 75%; //1rem = 12px 12/16 = 75%
+    font-size: 62.5%; //1rem = 12px 12/16 = 62.5%
   }
 
   @include respond(tab-land) {
@@ -37,6 +37,7 @@ li {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   color: $color-black;
 }

@@ -14,6 +14,12 @@ body {
     font-weight: $font-weight-seconday;
   }
 
+  &--1 {
+    font-size: 4.5rem;
+    line-height: 1;
+    color: $color-grey-light-1;
+  }
+
   &--2 {
     font-size: 4rem;
     font-style: italic;
