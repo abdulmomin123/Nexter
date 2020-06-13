@@ -24,15 +24,37 @@
     justify-self: start;
     align-self: start;
   }
+
   &__companies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 2rem;
   }
 
-  &__companies-logo {
+  &__companies-text {
+    grid-column: 1 / -1;
+    font-size: 1.6rem;
+    text-align: center;
+    color: $color-grey-light-2;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    gap: 2rem;
+
+    &::before,
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      background: currentColor;
+    }
   }
 
   &__companies-logo {
     display: inline-block;
     height: 2.5rem;
     width: auto;
+    filter: brightness(70%);
   }
 }
