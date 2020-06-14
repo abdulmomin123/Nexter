@@ -41,3 +41,8 @@ a {
   text-decoration: none;
   color: $color-black;
 }
+
+::selection {
+  color: $color-white;
+  background: $color-primary;
+}
