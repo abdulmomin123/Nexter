@@ -6,8 +6,8 @@
     ),
     url("/dist/img/hero.jpeg") no-repeat center center/cover;
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr min-content;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr min-content;
+  grid-template-columns: minmax(min-content, max-content);
 
   justify-content: center;
   gap: 1.5rem;
@@ -53,8 +53,17 @@
 
   &__companies-logo {
     display: inline-block;
-    height: 2.5rem;
+    max-width: 100%;
+    max-height: 2.5rem;
     width: auto;
     filter: brightness(70%);
+  }
+
+  @include respond(tab-port-small) {
+    grid-column: 1 / -1;
+  }
+
+  @include respond(phone) {
+    padding: 5rem;
   }
 }

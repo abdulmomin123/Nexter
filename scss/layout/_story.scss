@@ -2,7 +2,6 @@
   grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  overflow: hidden;
 
   &__pictures {
     display: grid;
@@ -20,6 +19,11 @@
       &--1 {
         grid-row: 2 / 6;
         grid-column: 2 / 6;
+
+        @include respond(tab-port-small) {
+          grid-row: 1 / -1;
+          grid-column: 1 / 5;
+        }
       }
 
       &--2 {
@@ -27,7 +31,17 @@
         grid-column: 4 / 7;
         width: 115%;
         z-index: 1;
+
+        @include respond(tab-port-small) {
+          grid-row: 1 / -1;
+          width: 100%;
+        }
       }
+    }
+
+    @include respond(tab-port-small) {
+      grid-column: 1 / -1;
+      padding: 3rem;
     }
   }
 
@@ -43,6 +57,11 @@
       font-size: 1.5rem;
       font-style: italic;
       margin-bottom: 4rem;
+    }
+
+    @include respond(tab-port-small) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
     }
   }
 }

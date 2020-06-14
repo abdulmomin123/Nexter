@@ -11,6 +11,16 @@
   &__list {
     display: grid;
     gap: 5vh;
+
+    @include respond(tab-port-small) {
+      grid-template-columns: repeat(3, auto);
+      margin-bottom: 2rem;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: inherit;
+      margin-bottom: inherit;
+    }
   }
 
   &__realtor {
@@ -25,10 +35,20 @@
     border-radius: 50%;
   }
 
+  &__stat {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__sold {
     font-size: 1.2rem;
     text-transform: uppercase;
     color: $color-grey-light-2;
     margin-top: -3px;
+  }
+
+  @include respond(tab-port-small) {
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
   }
 }
