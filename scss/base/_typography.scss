@@ -18,6 +18,10 @@ body {
     font-size: 4.5rem;
     line-height: 1;
     color: $color-grey-light-1;
+
+    &--gold {
+      color: $color-primary;
+    }
   }
 
   &--2 {
@@ -38,6 +42,10 @@ body {
     font-size: 1.6rem;
     text-transform: uppercase;
     color: $color-primary;
+
+    &--dark {
+      color: $color-grey-dark-1;
+    }
   }
 
   &--4 {

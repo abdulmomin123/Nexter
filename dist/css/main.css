@@ -67,6 +67,8 @@ body {
   font-size: 4.5rem;
   line-height: 1;
   color: #f9f7f6; }
+  .heading--1--gold {
+    color: #c69963; }
 
 .heading--2 {
   font-size: 4rem;
@@ -81,6 +83,8 @@ body {
   font-size: 1.6rem;
   text-transform: uppercase;
   color: #c69963; }
+  .heading--3--dark {
+    color: #54483a; }
 
 .heading--4 {
   font-family: "Josefin Sans", sans-serif;
@@ -136,6 +140,9 @@ body {
     .container {
       grid-template-rows: 6.5rem calc(100vh - 6.5rem);
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
+
+.container--about {
+  grid-template-rows: 15vh auto 40vw repeat(3, min-content); }
 
 .features {
   grid-column: center-start / center-end;
@@ -250,6 +257,9 @@ body {
   gap: 1.5rem;
   padding: 8rem;
   padding-top: 4rem; }
+  .header .home {
+    justify-self: center;
+    margin-bottom: auto; }
   .header__logo {
     height: 3rem;
     width: auto;
@@ -288,6 +298,10 @@ body {
   @media only screen and (max-width: 37.5em) {
     .header {
       padding: 5rem; } }
+
+.header--about {
+  grid-column: full-start / -1;
+  text-align: center; }
 
 .homes {
   grid-column: center-start / center-end;

@@ -14,6 +14,11 @@
   padding: 8rem;
   padding-top: 4rem;
 
+  .home {
+    justify-self: center;
+    margin-bottom: auto;
+  }
+
   &__logo {
     height: 3rem;
     width: auto;
@@ -66,4 +71,10 @@
   @include respond(phone) {
     padding: 5rem;
   }
+}
+
+// About page
+.header--about {
+  grid-column: full-start / -1;
+  text-align: center;
 }
