@@ -20,6 +20,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.2s;
+    z-index: 2;
 
     &:hover {
       background: rgba($color-white, 0.2);
@@ -31,6 +32,46 @@
       width: 5.5rem;
       height: 5rem;
       padding: 0.5rem;
+    }
+  }
+
+  &__bg {
+    width: 28rem;
+    height: 100%;
+    background: $color-primary;
+    position: relative;
+    z-index: 1;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+
+  &__toggler:checked ~ &__bg {
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  &__list {
+    position: fixed;
+    top: 3%;
+    left: 0;
+    width: 28rem;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__link {
+    font-size: 2.5rem;
+    color: $color-white;
+    width: 100%;
+    padding: 2rem 0;
+    transition: all 0.1s;
+
+    &:hover,
+    &--active {
+      background: $color-primary-dark;
     }
   }
 
