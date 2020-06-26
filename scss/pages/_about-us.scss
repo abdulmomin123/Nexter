@@ -1,0 +1,113 @@
+.about {
+  grid-column: 2 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  text-align: center;
+
+  @include respond(tab-port) {
+    grid-column: 1 / -1;
+  }
+
+  h1 {
+    font-size: 5rem;
+    font-weight: $font-weight-secondary;
+    margin-top: 2rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: 0.8rem;
+  }
+
+  h1,
+  h2,
+  &__p1,
+  &__p2,
+  &__p3 {
+    grid-column: 1 / -1;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
+
+  &__p1 {
+    background-image: linear-gradient(
+        rgba($color-white, 0.85),
+        rgba($color-white, 0.85)
+      ),
+      url(/dist/img/community.jpg);
+  }
+
+  &__p1,
+  &__p3 {
+    flex-direction: row-reverse;
+
+    & > *:first-child {
+      margin: 0;
+      margin-left: 2rem;
+    }
+  }
+
+  &__p1,
+  &__p2,
+  &__p3 {
+    padding: 5% 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: bottom;
+
+    @include respond(tab-port) {
+      padding: 5% 5%;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+
+    & > * {
+      flex: 0 0 50%;
+    }
+
+    & > *:first-child {
+      margin-right: 2rem;
+
+      @include respond(phone) {
+        margin: 0 0 1rem 0;
+      }
+    }
+  }
+
+  &__video {
+    @media only screen and (min-width: 37.5625em) {
+      width: 100%;
+      height: 27rem;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 30rem;
+    background: #ccc;
+
+    @include respond(phone) {
+      flex: none;
+    }
+  }
+
+  &__video,
+  &__map {
+    border-radius: 10px;
+  }
+
+  &__p3 {
+    background-image: linear-gradient(
+        rgba($color-white, 0.85),
+        rgba($color-white, 0.85)
+      ),
+      url(/dist/img/amenities.jpg);
+  }
+}

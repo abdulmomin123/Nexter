@@ -26,6 +26,12 @@
   }
 }
 
-.container--about {
+.container--2 {
   grid-template-rows: 15vh auto repeat(3, min-content);
+
+  @include respond(tab-port) {
+    grid-template-rows:
+      6.5rem
+      15vh auto repeat(3, min-content);
+  }
 }
