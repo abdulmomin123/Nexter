@@ -8,6 +8,19 @@
       "email phone"
       "message message";
     gap: 4rem;
+
+    @include respond(phone) {
+      gap: 2.5rem;
+    }
+
+    @include respond(phone-small) {
+      grid-template-areas:
+        "name name"
+        "subject subject"
+        "email email"
+        "phone phone"
+        "message message";
+    }
   }
 
   &__name {
@@ -28,7 +41,7 @@
 
   &__message {
     grid-area: message;
-    height: 100px;
+    height: 15rem;
   }
 
   &__name,
@@ -39,13 +52,17 @@
     font-family: inherit;
     font-size: inherit;
     padding: 2rem 3rem;
-    border: 1px solid #ddd;
+    border: 1px solid $color-border;
     border-radius: 5px;
     outline: none;
 
+    @include respond(phone-small) {
+      padding: 1rem 2rem;
+    }
+
     &:focus {
       border: 1px solid $color-primary;
-      transition: all 400ms;
+      transition: all 0.4s;
     }
   }
 
