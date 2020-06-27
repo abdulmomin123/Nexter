@@ -1,0 +1,55 @@
+.contact-form {
+  font-size: 1.7rem;
+
+  &__text-fields {
+    display: grid;
+    grid-template-areas:
+      "name subject"
+      "email phone"
+      "message message";
+    gap: 4rem;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__subject {
+    grid-area: subject;
+  }
+
+  &__email {
+    grid-area: email;
+  }
+
+  &__phone {
+    grid-area: phone;
+  }
+
+  &__message {
+    grid-area: message;
+    height: 100px;
+  }
+
+  &__name,
+  &__subject,
+  &__email,
+  &__phone,
+  &__message {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 2rem 3rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+
+    &:focus {
+      border: 1px solid $color-primary;
+      transition: all 400ms;
+    }
+  }
+
+  &__btn {
+    margin-top: 4rem;
+  }
+}
