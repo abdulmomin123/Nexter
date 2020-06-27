@@ -39,12 +39,15 @@
               </a>
             </li>
             <li class="sidebar__item">
-              <a href="about.html" class="sidebar__link sidebar__link--active">
+              <a href="about.html" class="sidebar__link">
                 About
               </a>
             </li>
             <li class="sidebar__item">
-              <a href="contact.html" class="sidebar__link">
+              <a
+                href="contact.html"
+                class="sidebar__link sidebar__link--active"
+              >
                 Contact
               </a>
             </li>
@@ -60,10 +63,37 @@
       </header>
 
       <!-- About Section -->
-      <section class="about">
-        <h1>
+      <section class="contact ta-c">
+        <h1 class="section-heading">
           Contact Us
         </h1>
+        <form action="#" class="contact-form">
+          <div class="contact-form__text-fields">
+            <input type="text" placeholder="Name" class="contact-form__name" />
+            <input
+              type="text"
+              placeholder="Subject"
+              class="contact-form__subject"
+            />
+            <input
+              type="text"
+              placeholder="Email Address"
+              class="contact-form__email"
+            />
+            <input
+              type="number"
+              placeholder="Phone Number"
+              class="contact-form__phone"
+            />
+            <textarea
+              placeholder="Enter Message"
+              class="contact-form__message"
+            ></textarea>
+          </div>
+          <button type="submit" class="contact-form__btn btn btn--contact">
+            Submit
+          </button>
+        </form>
       </section>
 
       <!-- Footer -->

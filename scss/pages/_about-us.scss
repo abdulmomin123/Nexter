@@ -1,18 +1,10 @@
 .about {
-  grid-column: 2 / -1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
-  text-align: center;
 
   @include respond(tab-port) {
     grid-column: 1 / -1;
-  }
-
-  h1 {
-    font-size: 5rem;
-    font-weight: $font-weight-secondary;
-    margin-top: 2rem;
   }
 
   h2 {

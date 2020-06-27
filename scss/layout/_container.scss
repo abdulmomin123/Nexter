@@ -28,6 +28,9 @@
 
 .container--2 {
   grid-template-rows: 15vh auto repeat(3, min-content);
+  & > * {
+    grid-column: 2 / -1;
+  }
 
   @include respond(tab-port) {
     grid-template-rows:

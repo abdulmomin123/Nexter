@@ -59,6 +59,11 @@ body {
   line-height: 1.6;
   color: #6d5d4b; }
 
+.section-heading {
+  font-size: 5rem;
+  font-weight: 400;
+  margin-top: 2rem; }
+
 .heading--1, .heading--2, .heading--3, .heading--4 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
@@ -107,6 +112,9 @@ body {
 .mb-hg {
   margin-bottom: 8rem; }
 
+.ta-c {
+  text-align: center; }
+
 .btn {
   font-family: "Josefin Sans", sans-serif;
   display: inline-block;
@@ -114,19 +122,48 @@ body {
   text-decoration: none;
   background: none;
   cursor: pointer; }
+  .btn--story, .btn--cta, .btn--contact {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: #c69963;
+    padding: 1.8rem 3rem;
+    border-radius: 5px;
+    transition: all 0.2s; }
+    .btn--story:hover, .btn--cta:hover, .btn--contact:hover {
+      background: #b28451; }
+  .btn--contact {
+    padding: 1.5rem 5rem; }
 
-.btn--story,
-.btn--cta {
-  color: #fff;
-  background: #c69963;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  padding: 1.8rem 3rem;
-  border-radius: 5px;
-  transition: all 0.2s; }
-  .btn--story:hover,
-  .btn--cta:hover {
-    background: #b28451; }
+.contact-form {
+  font-size: 1.7rem; }
+  .contact-form__text-fields {
+    display: grid;
+    grid-template-areas: "name subject" "email phone" "message message";
+    gap: 4rem; }
+  .contact-form__name {
+    grid-area: name; }
+  .contact-form__subject {
+    grid-area: subject; }
+  .contact-form__email {
+    grid-area: email; }
+  .contact-form__phone {
+    grid-area: phone; }
+  .contact-form__message {
+    grid-area: message;
+    height: 100px; }
+  .contact-form__name, .contact-form__subject, .contact-form__email, .contact-form__phone, .contact-form__message {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 2rem 3rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none; }
+    .contact-form__name:focus, .contact-form__subject:focus, .contact-form__email:focus, .contact-form__phone:focus, .contact-form__message:focus {
+      border: 1px solid #c69963;
+      transition: all 400ms; }
+  .contact-form__btn {
+    margin-top: 4rem; }
 
 .container {
   display: grid;
@@ -143,6 +180,8 @@ body {
 
 .container--2 {
   grid-template-rows: 15vh auto repeat(3, min-content); }
+  .container--2 > * {
+    grid-column: 2 / -1; }
   @media only screen and (max-width: 56.25em) {
     .container--2 {
       grid-template-rows: 6.5rem 15vh auto repeat(3, min-content); } }
@@ -577,18 +616,12 @@ body {
         grid-row: 1 / 2; } }
 
 .about {
-  grid-column: 2 / -1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
-  text-align: center; }
+  gap: 5rem; }
   @media only screen and (max-width: 56.25em) {
     .about {
       grid-column: 1 / -1; } }
-  .about h1 {
-    font-size: 5rem;
-    font-weight: 400;
-    margin-top: 2rem; }
   .about h2 {
     font-size: 2.5rem;
     letter-spacing: 0.8rem; }
@@ -639,3 +672,9 @@ body {
     border-radius: 10px; }
   .about__p3 {
     background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(/dist/img/amenities.jpg); }
+
+.contact {
+  padding: 0 20%;
+  margin-bottom: 10%; }
+  .contact h1 {
+    margin-bottom: 2rem; }

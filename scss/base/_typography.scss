@@ -5,6 +5,12 @@ body {
   color: $color-grey-dark-2;
 }
 
+.section-heading {
+  font-size: 5rem;
+  font-weight: $font-weight-secondary;
+  margin-top: 2rem;
+}
+
 .heading {
   &--1,
   &--2,
