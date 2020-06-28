@@ -305,7 +305,7 @@ body {
 
 .header {
   grid-column: full-start / col-end 6;
-  background: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url("/dist/img/hero.jpeg") no-repeat center center/cover;
+  background: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url("../img/hero.jpeg") no-repeat center center/cover;
   display: grid;
   grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr min-content;
   grid-template-columns: minmax(min-content, max-content);
@@ -590,7 +590,7 @@ body {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     align-items: center;
-    background: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url("/dist/img/back.jpg") no-repeat center center/cover; }
+    background: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url("../img/back.jpg") no-repeat center center/cover; }
     .story__pictures-img {
       box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
       .story__pictures-img--1 {
@@ -645,7 +645,7 @@ body {
   .about__text {
     font-size: 1.7rem; }
   .about__p1 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(/dist/img/community.jpg); }
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../img/community.jpg); }
   .about__p1, .about__p3 {
     flex-direction: row-reverse; }
     .about__p1 > *:first-child, .about__p3 > *:first-child {
@@ -691,7 +691,7 @@ body {
   .about__video, .about__map {
     border-radius: 10px; }
   .about__p3 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(/dist/img/amenities.jpg); }
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../img/amenities.jpg); }
 
 .contact {
   padding: 0 20%;

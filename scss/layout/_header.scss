@@ -4,7 +4,7 @@
       rgba($color-secondary, 0.9),
       rgba($color-secondary, 0.9)
     ),
-    url("/dist/img/hero.jpeg") no-repeat center center/cover;
+    url("../img/hero.jpeg") no-repeat center center/cover;
   display: grid;
   grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr min-content;
   grid-template-columns: minmax(min-content, max-content);
