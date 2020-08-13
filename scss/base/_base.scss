@@ -27,6 +27,13 @@ html {
   }
 }
 
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 img {
   display: block;
   width: 100%;
