@@ -180,6 +180,14 @@ body {
   .contact-form__btn {
     margin-top: 4rem; }
 
+.map {
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden; }
+  .map__map {
+    height: 100%;
+    width: 100%; }
+
 .container {
   display: grid;
   grid-template-rows: 80vh auto 40vw repeat(3, min-content);
@@ -690,7 +698,8 @@ body {
   .about__map {
     width: 100%;
     height: 30rem;
-    background: #ccc; }
+    background: #ccc;
+    overflow: hidden; }
     @media only screen and (max-width: 37.5em) {
       .about__map {
         flex: none; } }
